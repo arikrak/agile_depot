@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DepotAwdwr</title>
+  <title> The Shopping Site</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="store">
+<div id="banner>
+<%= image_tag("logo.png") %>
+<%= @page_title || "Zap-Shopping" %>
+</div>
 
-<%= yield %>
+<div id ="columns">
 
+	<div id="side">
+	<a href="Zappable.com">Zappable</a> <br>
+	<%= link_to "Home", root_path  %> <br>
+	<%= link_to "About", '/' %>
+	</div>
+	
+	<div id="main">
+	<%= yield %>
+	</div>
+
+</div>	
+	
 </body>
 </html>
